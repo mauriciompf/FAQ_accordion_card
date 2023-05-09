@@ -1,0 +1,27 @@
+@use './colors';
+
+.main__card--faq {
+    padding: 1rem 2rem 3rem;
+
+    &-list {
+        list-style: none;
+
+        &-item {
+            border-bottom: 1px solid colors.$clr-dividers;
+        }
+    }
+
+    &-title {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+
+    &-question {
+        color: colors.$clr-grayish-blue;
+    }
+
+    &-answer {
+        display: none;
+    }
+}
