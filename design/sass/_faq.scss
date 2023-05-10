@@ -1,13 +1,14 @@
 @use './colors';
 
 .main__card--faq {
-    padding: 1rem 2rem 3rem;
+    padding: 8rem 1rem 3rem;
 
     &-list {
         list-style: none;
 
         &-item {
             border-bottom: 1px solid colors.$clr-dividers;
+            padding: 1rem 0;
         }
     }
 
@@ -17,11 +18,20 @@
         font-size: 2rem;
     }
 
+    &-question-wrap {
+
+    }
+
     &-question {
         color: colors.$clr-grayish-blue;
+        font-size: .85rem;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &-answer {
-        display: none;
+        // display: none;
     }
 }
