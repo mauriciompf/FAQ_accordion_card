@@ -1,4 +1,4 @@
-@use './colors';
+@use '../sass/media-queries' as *;
 
 .main {
     padding: 9rem 0 1rem;
@@ -9,6 +9,11 @@
         background-color: #ffffff;
         border-radius: 1rem;
         position: relative;
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+        }
 
         &--image-wrap {
             // width: 76%;
@@ -23,6 +28,18 @@
                 top: -7rem;
                 width: 75%;
                 margin-inline: auto;
+                
+                @include desktop {
+                    // display: none;
+                    top: 0;
+                    // position: absolute;
+                    right: 0;
+                    left: 0;
+                    // z-index: 1;
+                    // top: -7rem;
+                    width: 35%;
+                    // margin-inline: auto;
+                }
             }
     
             &-shadow {
@@ -33,6 +50,10 @@
                 // top: 1rem;
                 width: 75%;
                 margin-inline: auto;
+
+                @include desktop {
+                    display: none;
+                }
             }
         }
     }

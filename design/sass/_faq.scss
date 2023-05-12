@@ -19,10 +19,8 @@
   }
 
   &-question-wrap[open] {
-    summary {
-        .main__card--faq-question-icon {
-            transform: rotate(180deg);
-        }
+    summary .main__card--faq-question-icon {
+      transform: rotate(180deg);
     }
   }
 

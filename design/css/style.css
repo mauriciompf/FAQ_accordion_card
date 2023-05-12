@@ -8,6 +8,12 @@
   border-radius: 1rem;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .main__card {
+    display: flex;
+    align-items: center;
+  }
+}
 .main__card--image-wrap {
   margin-inline: auto;
 }
@@ -20,12 +26,25 @@
   width: 75%;
   margin-inline: auto;
 }
+@media screen and (min-width: 768px) {
+  .main__card--image-wrap-woman {
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 35%;
+  }
+}
 .main__card--image-wrap-shadow {
   position: absolute;
   right: 0;
   left: 0;
   width: 75%;
   margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .main__card--image-wrap-shadow {
+    display: none;
+  }
 }
 
 .main__card--faq {
