@@ -15,8 +15,14 @@
   <main class="main">
     <div class="main__card">
       <div class="main__card--image-wrap">
-        <img class="main__card--image-wrap-woman" src="./images/illustration-woman-online-mobile.svg" alt="">
-        <img class="main__card--image-wrap-shadow" src="./images/bg-pattern-mobile.svg" alt="">
+        <picture>
+          <source media="(min-width: 768px)" width="400px" srcset="./images/illustration-woman-online-desktop.svg">
+          <img class="main__card--image-wrap-woman" src="./images/illustration-woman-online-mobile.svg" alt="">
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" srcset="./images/bg-pattern-desktop.svg">
+          <img class="main__card--image-wrap-shadow" src="./images/bg-pattern-mobile.svg" alt="">
+        </picture>
       </div>
       <div class="main__card--faq">
         <h1 class="main__card--faq-title">
@@ -27,7 +33,7 @@
             <details class="main__card--faq-question-wrap">
                 <summary class="main__card--faq-question">
                   How many team members can I invite?
-                  <img class="main__card--faq-question-icon" src="./images/icon-arrow-down.svg" alt="">
+                    <img class="main__card--faq-question-icon" src="./images/icon-arrow-down.svg" alt="">
                 </summary>
                 <p class="main__card--faq-answer">
                   You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
