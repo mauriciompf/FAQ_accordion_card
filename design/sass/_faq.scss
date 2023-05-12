@@ -1,37 +1,53 @@
 @use './colors';
 
 .main__card--faq {
-    padding: 8rem 1rem 3rem;
+  padding: 8rem 1rem 3rem;
 
-    &-list {
-        list-style: none;
+  &-list {
+    list-style: none;
 
-        &-item {
-            border-bottom: 1px solid colors.$clr-dividers;
-            padding: 1rem 0;
+    &-item {
+      border-bottom: 1px solid colors.$clr-dividers;
+      padding: 1rem 0;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  &-question-wrap[open] {
+    summary {
+        .main__card--faq-question-icon {
+            transform: rotate(180deg);
         }
     }
+  }
 
-    &-title {
-        text-align: center;
-        margin-bottom: 1.5rem;
-        font-size: 2rem;
+  &-question {
+    font-size: 0.9rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:active,
+    &:hover,
+    &:focus {
+      font-weight: 700;
     }
 
-    &-question-wrap {
-
+    &-icon {
+        transition: transform 0.3s ease;
     }
+  }
 
-    &-question {
-        color: colors.$clr-grayish-blue;
-        font-size: .85rem;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &-answer {
-        // display: none;
-    }
+  &-answer {
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: colors.$clr-grayish-blue;
+  }
 }
