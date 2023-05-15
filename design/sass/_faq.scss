@@ -1,51 +1,93 @@
 @use './colors';
+@use '../sass/media-queries' as *;
 
-.main__card--faq {
-  padding: 8rem 1rem 3rem;
+.faq-card__content {
+  padding: 1rem 1rem 3rem;
 
-  &-list {
-    list-style: none;
-
-    &-item {
-      border-bottom: 1px solid colors.$clr-dividers;
-      padding: 1rem 0;
-    }
+  @include desktop {
+    padding: 3.5rem 0;
+    margin-right: 5rem;
   }
 
   &-title {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5rem;
     font-size: 2rem;
+
+    @include desktop {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
   }
 
-  &-question-wrap[open] {
-    summary .main__card--faq-question-icon {
+  &-item[open] {
+    summary > img {
       transform: rotate(180deg);
+      transition: transform .5s ease;
     }
   }
 
-  &-question {
-    font-size: 0.9rem;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &-item {
+    // border-bottom: 1px solid colors.$clr-dividers;
+    padding: 1rem 0;
 
-    &:active,
-    &:hover,
-    &:focus {
-      font-weight: 700;
+    &-question {
+      font-size: 0.9rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+
+      &:active,
+      &:hover,
+      &:focus {
+        font-weight: 700;
+      }
+
+      & > img {
+        transition: transform .5s ease;
+      }
     }
 
-    &-icon {
-        transition: transform 0.3s ease;
+    &-answer {
+      padding-top: 1rem;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: colors.$clr-grayish-blue;
     }
-  }
-
-  &-answer {
-    padding-top: 1rem;
-    font-size: 0.8rem;
-    line-height: 1.6;
-    color: colors.$clr-grayish-blue;
   }
 }
+
+
+  // &-question-wrap[open] {
+//     summary .main__card--faq-question-icon {
+//       transform: rotate(180deg);
+//     }
+//   }
+
+//   &-question {
+//     font-size: 0.9rem;
+//     list-style: none;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     &:active,
+//     &:hover,
+//     &:focus {
+//       font-weight: 700;
+//     }
+
+//     &-icon {
+//       transition: transform 0.3s ease;
+//     }
+//   }
+
+//   &-answer {
+//     padding-top: 1rem;
+//     font-size: 0.8rem;
+//     line-height: 1.6;
+//     color: colors.$clr-grayish-blue;
+//   }
+// }
