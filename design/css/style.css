@@ -23,15 +23,23 @@
   .faq-card__container-box-image {
     display: block;
     position: absolute;
-    left: 6.5rem;
-    top: 15rem;
-    width: 100px;
-    height: 100px;
+    left: 7rem;
+    top: 18.5rem;
     z-index: 11;
   }
 }
 .faq-card__illustrations {
   height: 80px;
+}
+.faq-card__illustrations::after {
+  position: relative;
+  display: block;
+  content: "";
+  background-image: url(/faq-accordion-card-main/faq-accordion-card-main/images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  width: min(95%, 250px);
+  height: 105px;
+  margin-inline: auto;
 }
 @media screen and (min-width: 1200px) {
   .faq-card__illustrations {
@@ -67,7 +75,7 @@
 }
 
 .faq-card__content {
-  padding: 1rem 1rem 3rem;
+  padding: 2rem 1rem 3rem;
 }
 @media screen and (min-width: 1200px) {
   .faq-card__content {
@@ -128,8 +136,14 @@ body {
   background-repeat: no-repeat;
 }
 
-img {
+img,
+picture {
   max-width: 100%;
+  display: block;
+}
+
+picture {
+  height: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
