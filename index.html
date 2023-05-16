@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./design/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <main class="faq-card">
+      <div class="faq-card__container">
+        <div class="faq-card__container-box-image">
+          <img src="./images/illustration-box-desktop.svg" alt="">
+        </div>
+        <div class="faq-card__illustrations">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./images/illustration-woman-online-desktop.svg">
+            <img src="./images/illustration-woman-online-mobile.svg" alt="Illustration imagem">
+          </picture>
+        </div>
+        <div class="faq-card__content">
+          <h1 class="faq-card__content-title"> FAQ </h1>
+          <details class="faq-card__content-item">
+            <summary class="faq-card__content-item-question"> How many team members can I invite? <img src="./images/icon-arrow-down.svg" alt="">
+            </summary>
+            <p class="faq-card__content-item-answer"> You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan. </p>
+          </details>
+          <details class="faq-card__content-item">
+            <summary class="faq-card__content-item-question"> What is the maximum file upload size? <img src="./images/icon-arrow-down.svg" alt="">
+            </summary>
+            <p class="faq-card__content-item-answer"> No more than 2GB. All files in your account must fit your allotted storage space. </p>
+          </details>
+          <details class="faq-card__content-item">
+            <summary class="faq-card__content-item-question"> How do I reset my password? <img src="./images/icon-arrow-down.svg" alt="">
+            </summary>
+            <p class="faq-card__content-item-answer"> Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you. </p>
+          </details>
+          <details class="faq-card__content-item">
+            <summary class="faq-card__content-item-question"> Can I cancel my subscription? <img src="./images/icon-arrow-down.svg" alt="">
+            </summary>
+            <p class="faq-card__content-item-answer"> Yes! Send us a message and we’ll process your request no questions asked. </p>
+          </details>
+          <details class="faq-card__content-item">
+            <summary class="faq-card__content-item-question"> Do you provide additional support? <img src="./images/icon-arrow-down.svg" alt="">
+            </summary>
+            <p class="faq-card__content-item-answer"> Chat and email support is available 24/7. Phone lines are open during normal business hours. </p>
+          </details>
+        </div>
+      </div>
+    </main>
+    <script src="./design/js/app.js"></script>
+  </body>
+</html>

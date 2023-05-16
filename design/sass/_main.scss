@@ -1,0 +1,84 @@
+@use '../sass/media-queries' as *;
+
+.faq-card {
+    margin: 8rem 0 1rem;
+
+    &__container {
+        width: 90%;
+        margin-inline: auto;
+        background-color: #fff;
+        border-radius: 1rem;
+
+        &-box-image {
+            display: none;
+        }
+
+        @include desktop {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+            
+            &-box-image {
+                display: block;
+                position: absolute;
+                left: 7rem;
+                top: 18.5rem;
+                z-index: 11;
+            }
+        }
+    }
+
+    &__illustrations {
+        height: 5rem;
+
+        &::after {
+            display: block;
+            content: "";
+            background-image: url(/faq-accordion-card-main/faq-accordion-card-main/images/bg-pattern-mobile.svg);
+            background-repeat: no-repeat;
+            width: min(95%, 15.625rem);
+            height: 6.5625rem;
+            margin-inline: auto;
+
+            @include desktop {
+                background-image: url(/faq-accordion-card-main/faq-accordion-card-main/images/bg-pattern-desktop.svg);
+                background-position-y: 60%;
+                background-position-x: 115%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @include desktop {
+            overflow: hidden;
+            height: auto;
+        }
+
+        & img {
+            display: block;
+            margin-inline: auto;
+
+            @include desktop {
+                margin-inline: 0;
+            }
+        }
+
+        & picture img {
+            position: relative;
+            z-index: 10;
+            top: -6.5rem;
+            width: 14.375rem;
+            height: 11rem;
+        }
+
+        @include desktop {
+            & picture img {
+                position: relative;
+                left: -5rem;
+                top: 2rem;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}
