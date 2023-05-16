@@ -34,14 +34,14 @@
         &::after {
             display: block;
             content: "";
-            background-image: url(/faq-accordion-card-main/faq-accordion-card-main/images/bg-pattern-mobile.svg);
+            background-image: url("../images/bg-pattern-mobile.svg");
             background-repeat: no-repeat;
             width: min(95%, 15.625rem);
             height: 6.5625rem;
             margin-inline: auto;
 
             @include desktop {
-                background-image: url(/faq-accordion-card-main/faq-accordion-card-main/images/bg-pattern-desktop.svg);
+                background-image: url("../images/bg-pattern-desktop.svg");
                 background-position-y: 60%;
                 background-position-x: 115%;
                 width: 100%;
